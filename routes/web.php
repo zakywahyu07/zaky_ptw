@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\ArtikelController as ControllersArtikelController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ArtikelController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +19,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/home', [HomeController::class, 'index']); 
+Route::get('/Artikel', [ArtikelController::class, 'index']);
